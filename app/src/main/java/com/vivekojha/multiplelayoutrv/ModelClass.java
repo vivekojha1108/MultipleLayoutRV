@@ -2,6 +2,7 @@ package com.vivekojha.multiplelayoutrv;
 
 
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 public class ModelClass {
 
@@ -9,6 +10,7 @@ public class ModelClass {
     public static final int AD_LAYOUT = 1;
     public static final int IMAGE_LAYOUT = 2;
     public static final  int RECYCLE_LAYOUT = 3;
+    public static final  int FRAGMENT_SLIDER_LAYOUT = 4;
 
     private int viewType;
 
@@ -91,5 +93,21 @@ public class ModelClass {
 
     public void setRecyclerView(RecyclerView recyclerView) {
         this.recyclerView = recyclerView;
+    }
+
+    //FRAGMENT_SLIDER_LAYOUT
+    private ViewPager viewPager;
+
+    public ModelClass(int viewType, ViewPager viewPager) {
+        this.viewType = viewType;
+        this.viewPager = viewPager;
+    }
+
+    public ViewPager getViewPager() {
+        return viewPager;
+    }
+
+    public void setViewPager(ViewPager viewPager) {
+        this.viewPager = viewPager;
     }
 }
